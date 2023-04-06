@@ -19,6 +19,7 @@ OPTION(USE_D2D_WSI "Build the project using Direct to Display swapchain" OFF)
 OPTION(USE_DIRECTFB_WSI "Build the project using DirectFB swapchain" OFF)
 OPTION(USE_WAYLAND_WSI "Build the project using Wayland swapchain" OFF)
 OPTION(USE_HEADLESS "Build the project using headless extension swapchain" OFF)
+option(BUILD_EXAMPLES "Build the Vulkan examples" OFF)
 
 set(RESOURCE_INSTALL_DIR "" CACHE PATH "Path to install resources to (leave empty for running uninstalled)")
 
@@ -149,4 +150,7 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin/")
 
 add_subdirectory(base)
 add_subdirectory(homework)
-# add_subdirectory(examples)
+
+if(BUILD_EXAMPLES)
+	add_subdirectory(examples)
+endif()
