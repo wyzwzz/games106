@@ -8,6 +8,11 @@
 
 详情可以查看项目原来的 [BUILD文档](./BUILD.md) ，可以在Windows/Linux/Andorid/macOS/iOS中构建
 
+**模型和贴图需要在clone项目后手动下载，否则程序运行时可能加载资源失败而崩溃**
+```cmd
+python download_assets.py 
+```
+
 ## HomeWork
 
 作业的课程代码在./homework目录下，shader在./data/homework/shaders下。上传作业也按照一样的文件结构。上传对应的文件即可。
