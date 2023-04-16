@@ -37,6 +37,8 @@ function(buildHomework HOMEWORK_NAME)
 		target_link_libraries(${HOMEWORK_NAME} base )
 	endif(WIN32)
 
+	target_compile_features(${HOMEWORK_NAME} PRIVATE cxx_std_17)
+
 	set_target_properties(${HOMEWORK_NAME} PROPERTIES VS_DEBUGGER_WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
 	if(${HOMEWORK_NAME} STREQUAL "texture3d")
 		if(APPLE)
