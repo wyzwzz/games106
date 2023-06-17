@@ -16,6 +16,7 @@ layout (set = 0, binding = 0) uniform UBOScene
 	vec4 viewPos;
 } uboScene;
 
+// todo set 3 -> 1
 layout(set = 3, binding = 0) uniform PerObject{
 	mat4 model;
 }perObject;
@@ -24,6 +25,8 @@ layout(push_constant) uniform PushConsts {
 	int hasSkin;
 } primitive;
 
+// per primitive
+// todo set 1 -> 2
 layout(std430, set = 1, binding = 0) readonly buffer JointMatrices{
 	mat4 jointMatrices[];
 };
